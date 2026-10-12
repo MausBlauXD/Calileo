@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, noarchive">
+<meta name="description" content="Privacy policy of the Calileo app for iPhone and Apple Watch.">
+<title>Calileo Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f8f6;
+    --surface: #ffffff;
+    --surface-alt: #edf3f0;
+    --border: #dde6e1;
+    --text: #172420;
+    --text-secondary: #55655e;
+    --accent: #0e8b71;
+    --accent-strong: #0a6e59;
+    --accent-soft: #e3f3ee;
+    --rule: #cdd9d3;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0d1512;
+      --surface: #121c18;
+      --surface-alt: #17221d;
+      --border: #253229;
+      --text: #e9f1ee;
+      --text-secondary: #98aba3;
+      --accent: #3fd7ae;
+      --accent-strong: #6ee6c6;
+      --accent-soft: #15332a;
+      --rule: #253229;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #0d1512;
+    --surface: #121c18;
+    --surface-alt: #17221d;
+    --border: #253229;
+    --text: #e9f1ee;
+    --text-secondary: #98aba3;
+    --accent: #3fd7ae;
+    --accent-strong: #6ee6c6;
+    --accent-soft: #15332a;
+    --rule: #253229;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem;
+  }
+
+  header.doc-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding-bottom: 2.25rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-strong);
+  }
+
+  .mark::before {
+    content: "";
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 999px;
+    background: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+  }
+
+  h1 {
+    font-family: "Newsreader", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  .doc-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.2rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+  }
+
+  .doc-meta strong { color: var(--text); font-weight: 500; }
+
+  /* Summary */
+  .tldr {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.5rem 1.6rem;
+    margin-bottom: 2.75rem;
+  }
+
+  .tldr h2 {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-strong);
+    margin: 0 0 0.9rem;
+    font-weight: 500;
+  }
+
+  .tldr ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.65rem;
+  }
+
+  .tldr li {
+    position: relative;
+    padding-left: 1.55rem;
+    font-size: 0.96rem;
+    color: var(--text);
+  }
+
+  .tldr li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0.02em;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* Table of contents */
+  nav.toc {
+    margin-bottom: 3rem;
+  }
+
+  nav.toc h2 {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin: 0 0 0.8rem;
+  }
+
+  nav.toc ol {
+    columns: 2;
+    column-gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: toc;
+  }
+
+  nav.toc li {
+    counter-increment: toc;
+    break-inside: avoid;
+    margin-bottom: 0.5rem;
+  }
+
+  nav.toc a {
+    display: flex;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.92rem;
+  }
+
+  nav.toc a::before {
+    content: counter(toc, decimal-leading-zero);
+    font-family: "IBM Plex Mono", monospace;
+    color: var(--accent);
+    font-size: 0.82rem;
+    flex-shrink: 0;
+  }
+
+  nav.toc a:hover { color: var(--text); text-decoration: underline; }
+
+  /* Sections */
+  section.clause {
+    padding-top: 2.4rem;
+    margin-top: 2.4rem;
+    border-top: 1px solid var(--rule);
+    scroll-margin-top: 1.5rem;
+  }
+
+  section.clause:first-of-type { border-top: none; margin-top: 0; padding-top: 0; }
+
+  .clause-number {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.82rem;
+    color: var(--accent-strong);
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  h2 {
+    font-family: "Newsreader", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: -0.005em;
+    text-wrap: balance;
+    margin: 0 0 1rem;
+  }
+
+  h3 {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1.02rem;
+    margin: 1.6rem 0 0.6rem;
+    color: var(--text);
+  }
+
+  p { margin: 0 0 1rem; max-width: 40em; }
+  p:last-child { margin-bottom: 0; }
+
+  .clause > p:first-of-type { margin-top: 0; }
+
+  ul.plain, ol.plain {
+    margin: 0 0 1rem;
+    padding-left: 1.3rem;
+  }
+
+  ul.plain li, ol.plain li { margin-bottom: 0.45rem; max-width: 38em; }
+
+  a { color: var(--accent-strong); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  strong { font-weight: 600; }
+
+  code {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.88em;
+    background: var(--surface-alt);
+    padding: 0.1em 0.4em;
+    border-radius: 5px;
+  }
+
+  /* data table for HealthKit types */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0 1.2rem;
+    font-size: 0.92rem;
+  }
+
+  .data-table th {
+    text-align: left;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    font-weight: 500;
+    padding: 0 0.8rem 0.5rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .data-table td {
+    padding: 0.55rem 0.8rem 0.55rem 0;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+
+  .data-table tr:last-child td { border-bottom: none; }
+
+  .tag {
+    display: inline-block;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    padding: 0.15em 0.55em;
+    border-radius: 5px;
+    background: var(--accent-soft);
+    color: var(--accent-strong);
+    white-space: nowrap;
+  }
+
+  .tag.read { background: var(--surface-alt); color: var(--text-secondary); }
+
+  .contact-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem 2.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.5rem 1.7rem;
+  }
+
+  .contact-card div { min-width: 10rem; }
+
+  .fineprint {
+    margin-top: 1.1rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    max-width: 34em;
+  }
+
+  .contact-card .label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 0.3rem;
+  }
+
+  footer.doc-footer {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: 560px) {
+    nav.toc ol { columns: 1; }
+    .page { padding: 2.75rem 1.25rem 4rem; }
+  }
+
+  @media print {
+    body { background: #fff; color: #000; }
+    .page { max-width: none; padding: 0; }
+    .tldr, .contact-card { border-color: #999; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="doc-header">
+    <a class="mark" href="en.html" style="text-decoration:none">Calileo</a>
+    <h1>Privacy Policy</h1>
+    <div class="doc-meta">
+      <span>Last updated: <strong>October 12, 2026</strong></span>
+      <span>Version <strong>2.1</strong></span>
+      <span>Language: <strong>English</strong> · <a href="datenschutz.html" hreflang="de" lang="de">Deutsch</a></span>
+    </div>
+  </header>
+
+  <div class="tldr">
+    <h2>Summary</h2>
+    <ul>
+      <li>Calileo runs no servers of its own. Nutrition, training and weight data stay on your device only and, optionally, in your <strong>private</strong> iCloud.</li>
+      <li>No tracking, no third-party ads, no analytics services — anywhere in the app.</li>
+      <li>Photo recognition and label scanning run entirely on your device, never in the cloud.</li>
+      <li>Friend sharing is optional: friends with your code see your weight, phases, training (including workout history with heart rate) and achievements — never your meals. You can stop sharing at any time.</li>
+      <li>Form photos and videos stay on your iPhone. They only leave it encrypted and only for friends whose request you approve — viewed once, without screenshots.</li>
+      <li>The only external connection: product lookups in the Open Food Facts database, without any personal data.</li>
+    </ul>
+  </div>
+
+  <nav class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#principle">Principle: no server of our own</a></li>
+      <li><a href="#data">What data is processed</a></li>
+      <li><a href="#storage">Storage &amp; iCloud sync</a></li>
+      <li><a href="#sharing">Friend sharing</a></li>
+      <li><a href="#form">Form photos and videos</a></li>
+      <li><a href="#off">Open Food Facts</a></li>
+      <li><a href="#watch">Apple Watch</a></li>
+      <li><a href="#notifications">Notifications &amp; reminders</a></li>
+      <li><a href="#tracking">No tracking, no third-party ads</a></li>
+      <li><a href="#deletion">Retention &amp; deletion</a></li>
+      <li><a href="#rights">Your rights</a></li>
+      <li><a href="#security">Data security</a></li>
+      <li><a href="#children">Children</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <section class="clause" id="principle">
+    <span class="clause-number">01</span>
+    <h2>Principle: no server of our own</h2>
+    <p>Calileo is designed as a local app. There is no Calileo server infrastructure where your nutrition, training, weight or health data is stored or analysed. All of this data stays on your device or, if you use iCloud, in your <strong>private</strong> iCloud space, secured by your Apple Account. Neither we nor third parties — except Apple as the technical provider of your iCloud — have access to this data.</p>
+  </section>
+
+  <section class="clause" id="data">
+    <span class="clause-number">02</span>
+    <h2>What data Calileo processes</h2>
+
+    <h3>2.1 Data you enter</h3>
+    <p>Meals (barcode or name, portion size, nutrition values), your own recipes, training machines and logged sets (weight, reps), water and fasting log, weight entries, and your daily and macro goals.</p>
+
+    <h3>2.2 HealthKit</h3>
+    <p>With your permission, Calileo reads and writes the following categories via Apple’s HealthKit framework:</p>
+    <table class="data-table">
+      <tr><th>Category</th><th>Access</th></tr>
+      <tr><td>Calories, protein, carbohydrates, fat</td><td><span class="tag">write</span></td></tr>
+      <tr><td>Water</td><td><span class="tag">write</span></td></tr>
+      <tr><td>Body weight</td><td><span class="tag">write</span> <span class="tag read">read</span></td></tr>
+      <tr><td>Body fat percentage, waist circumference</td><td><span class="tag read">read</span></td></tr>
+      <tr><td>Active energy</td><td><span class="tag read">read</span></td></tr>
+      <tr><td>Strength training workouts (iPhone or Apple Watch)</td><td><span class="tag">write</span></td></tr>
+      <tr><td>Heart rate (during workouts)</td><td><span class="tag read">read</span></td></tr>
+    </table>
+    <p>Weights you log in the Health app or another app (e.g. your smart scale) are imported by Calileo automatically — also in the background as soon as Health reports a new weight. You can turn this off under <code>Settings → Import weight from Health</code>. Body fat and waist circumference are only read to show them to you in the statistics.</p>
+    <p>This data never leaves your device or your private iCloud towards Calileo — unless you share it yourself via friend sharing (see below). You can review or revoke access at any time under <code>Settings → Health → Data Access &amp; Devices → Calileo</code>.</p>
+
+    <h3>2.3 Camera (barcode scanner)</h3>
+    <p>The barcode scanner processes the camera image only on your device (VisionKit) to read the barcode digits. No images are stored or transmitted.</p>
+
+    <h3>2.4 Photo and label recognition</h3>
+    <p>The features “recognise a meal from a photo” and “scan a nutrition label” use Apple’s on-device Foundation Models and Vision frameworks. The analysis runs entirely on your iPhone — photos are not sent to Calileo or any third party.</p>
+
+    <h3>2.5 Location</h3>
+    <p>Calileo does not collect location data.</p>
+  </section>
+
+  <section class="clause" id="storage">
+    <span class="clause-number">03</span>
+    <h2>Storage &amp; iCloud sync</h2>
+    <p>The app stores your data locally (in an app group that also feeds the Home Screen widget with today’s numbers) and — if you are signed in to iCloud — syncs it automatically via <strong>CloudKit</strong> to your private iCloud database. Your phases (cut, bulk, etc.) are kept in your private iCloud key-value store so they carry over to a new device. This space belongs to your Apple Account; Calileo cannot see or access it.</p>
+    <p>Finished workouts from the Today tab (title, duration, average and maximum heart rate) are stored on your iPhone only.</p>
+  </section>
+
+  <section class="clause" id="sharing">
+    <span class="clause-number">04</span>
+    <h2>Friend sharing (optional)</h2>
+    <p>In the <code>Friends</code> tab you can choose to share your progress via a personal code. The following is then shared:</p>
+    <ul>
+      <li>your chosen display name,</li>
+      <li>your weight history, goal weight and phases (cut, bulk, etc.),</li>
+      <li>your training machines with folders and all logged sets (weight, reps, time),</li>
+      <li>your finished workouts from the Today tab with duration and average and maximum heart rate,</li>
+      <li>your achievements and your streak (how many days in a row you logged something),</li>
+      <li>whether and when you posted form photos or a form video (not the content itself, see below).</li>
+    </ul>
+    <p>This information is stored in Calileo’s public CloudKit database and can be seen by anyone who knows your code. Your height, your BMI and individual meals or calories are <strong>never</strong> included. You can stop sharing at any time under <code>Friends → Your profile → Stop sharing</code>; the shared data is then deleted.</p>
+    <p>If you cheer on a friend, your display name and the date are stored under their code in the same public database so they can see the cheer. Only cheers from the last two weeks are shown.</p>
+  </section>
+
+  <section class="clause" id="form">
+    <span class="clause-number">05</span>
+    <h2>Form photos and videos (optional)</h2>
+    <p>You can record up to three photos and one video of your form per entry. They are scaled down to 1080p (videos to at most 1 minute at 30 frames per second, without sound) and stored only on your iPhone (with iOS data protection class “complete protection”), not in iCloud.</p>
+    <p>If you share your progress, friends see the date and type of your form entries (e.g. “2 photos + video”) and a tiny blurred preview of each (24 pixels wide, not encrypted, but without recognisable detail), and can request any entry. If you approve a request, exactly that entry is stored in the public CloudKit database, <strong>encrypted</strong> with its own random key (AES-256) — without the key the data cannot be read. For friends on an older app version, your newest entry is also available in encrypted form. Only the device whose request you approve receives the key (protected by a key exchange). After it has been viewed once, the key is deleted on your friend’s device; photos and video are hidden in screenshots and screen recordings. A request transmits the friend’s display name and a random device ID.</p>
+  </section>
+
+  <section class="clause" id="off">
+    <span class="clause-number">06</span>
+    <h2>Open Food Facts (third party)</h2>
+    <p>To look up product information, Calileo sends the scanned barcode or your search term to the open food database <strong>Open Food Facts</strong> (primarily <code>ch.openfoodfacts.org</code>, falling back to <code>world.openfoodfacts.org</code>). Only the barcode or search text and technically unavoidable information such as your IP address are transmitted — nothing about you, your account or your nutrition data. Open Food Facts is a non-profit project independent of Calileo; you can find its privacy policy at <a href="https://world.openfoodfacts.org/privacy" target="_blank" rel="noopener">world.openfoodfacts.org/privacy</a>.</p>
+  </section>
+
+  <section class="clause" id="watch">
+    <span class="clause-number">07</span>
+    <h2>Apple Watch</h2>
+    <p>If an Apple Watch is paired, Calileo transfers training machines, folders, targets and completed sets directly between iPhone and Watch (WatchConnectivity). This transfer runs between your devices over your own Apple infrastructure, without touching a Calileo server. During a workout on the Watch, Calileo shows your heart rate and, with your permission, saves the workout to the Health app as a strength training workout.</p>
+  </section>
+
+  <section class="clause" id="notifications">
+    <span class="clause-number">08</span>
+    <h2>Notifications &amp; reminders</h2>
+    <p>Reminders (e.g. to log a meal or when a fasting window ends), the alarm at the end of a rest and notifications about cheers and form photo requests are created locally on your device — not sent by a server. For cheers and requests, Calileo checks the public database when you open the app and occasionally in the background. Apple push notifications are used only technically to sync your data via iCloud, never for marketing.</p>
+  </section>
+
+  <section class="clause" id="tracking">
+    <span class="clause-number">09</span>
+    <h2>No tracking, no third-party ads</h2>
+    <p>Calileo contains no third-party ads, no third-party analytics or tracking SDKs and builds no cross-device profiles. The only advertising is a note labelled “From the developer” at the end of the Progress tab pointing to our own app Rackount: a simple link to the App Store that collects or transmits no data. There is nothing to agree to in Apple’s App Tracking Transparency prompt, because no tracking takes place.</p>
+  </section>
+
+  <section class="clause" id="deletion">
+    <span class="clause-number">10</span>
+    <h2>Retention &amp; deletion</h2>
+    <p>Entries are kept until you delete them; deletions are also removed from your iCloud at the next sync. If you uninstall Calileo, iOS removes the local app data. You can also manage or delete your iCloud data under <code>Settings → [your name] → iCloud → Apps using iCloud</code>. A stopped friend share is no longer accessible immediately. Form photos can be deleted individually in the app; deleted entries are removed from the public database.</p>
+  </section>
+
+  <section class="clause" id="rights">
+    <span class="clause-number">11</span>
+    <h2>Your rights</h2>
+    <p>Under the Swiss Federal Act on Data Protection (FADP) and — for people in the EU — the GDPR, you have in particular the right of access, rectification, erasure and restriction of processing, as well as data portability and objection. As Calileo keeps no database about you, most of these rights concern the app on your device and your iCloud settings directly. For questions, contact us at <a href="mailto:support.calileo@calileo.ch">support.calileo@calileo.ch</a>. You also have the right to lodge a complaint with a supervisory authority — in Switzerland the <a href="https://www.edoeb.admin.ch" target="_blank" rel="noopener">Federal Data Protection and Information Commissioner (FDPIC)</a>, in the EU your competent data protection authority.</p>
+  </section>
+
+  <section class="clause" id="security">
+    <span class="clause-number">12</span>
+    <h2>Data security</h2>
+    <p>Requests to Open Food Facts use encrypted HTTPS connections only. Local data and iCloud sync are protected by Apple’s platform security (including encryption on the device and in transit). Form photos are additionally end-to-end encrypted before they leave your device. Calileo itself runs no servers that would need additional protection.</p>
+  </section>
+
+  <section class="clause" id="children">
+    <span class="clause-number">13</span>
+    <h2>Children</h2>
+    <p>Calileo is not directed at children. As there is no sign-up or account creation, there is no separate age check.</p>
+  </section>
+
+  <section class="clause" id="changes">
+    <span class="clause-number">14</span>
+    <h2>Changes to this policy</h2>
+    <p>If this policy is changed, we publish the revised version at the same address with an updated date at the top of this page.</p>
+  </section>
+
+  <section class="clause" id="contact">
+    <span class="clause-number">15</span>
+    <h2>Controller &amp; contact</h2>
+    <p>For questions about this policy or your data, you can reach us at:</p>
+    <div class="contact-card">
+      <div>
+        <div class="label">Email</div>
+        <a href="mailto:support.calileo@calileo.ch">support.calileo@calileo.ch</a>
+      </div>
+      <div>
+        <div class="label">App</div>
+        Calileo, ch.calileo.Calileo
+      </div>
+    </div>
+    <p class="fineprint">Controller within the meaning of the Swiss Federal Act on Data Protection (FADP) and, where applicable, the EU General Data Protection Regulation (GDPR): Valentin Erler, Baldismoosstrasse 24, 6043 Adligenswil, Switzerland.</p>
+  </section>
+
+  <footer class="doc-footer">
+    This privacy policy applies to the Calileo iOS and watchOS app and its Home Screen widget.
+  </footer>
+
+</div>
+</body>
+</html>

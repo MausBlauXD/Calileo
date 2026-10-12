@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Calileo – count calories, track your weight and get stronger at the gym. Help and support for the app for iPhone and Apple Watch.">
+<title>Calileo Support</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f8f6;
+    --surface: #ffffff;
+    --surface-alt: #edf3f0;
+    --border: #dde6e1;
+    --text: #172420;
+    --text-secondary: #55655e;
+    --accent: #0e8b71;
+    --accent-strong: #0a6e59;
+    --accent-soft: #e3f3ee;
+    --rule: #cdd9d3;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0d1512;
+      --surface: #121c18;
+      --surface-alt: #17221d;
+      --border: #253229;
+      --text: #e9f1ee;
+      --text-secondary: #98aba3;
+      --accent: #3fd7ae;
+      --accent-strong: #6ee6c6;
+      --accent-soft: #15332a;
+      --rule: #253229;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #0d1512;
+    --surface: #121c18;
+    --surface-alt: #17221d;
+    --border: #253229;
+    --text: #e9f1ee;
+    --text-secondary: #98aba3;
+    --accent: #3fd7ae;
+    --accent-strong: #6ee6c6;
+    --accent-soft: #15332a;
+    --rule: #253229;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-strong);
+  }
+
+  .mark::before {
+    content: "";
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 999px;
+    background: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 2.25rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  h1 {
+    font-family: "Newsreader", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(2.1rem, 5vw, 2.9rem);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  .lede { margin: 0; color: var(--text-secondary); max-width: 34em; }
+
+  .platforms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .platforms li {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.74rem;
+    padding: 0.2em 0.65em;
+    border-radius: 6px;
+    background: var(--accent-soft);
+    color: var(--accent-strong);
+  }
+
+  h2 {
+    font-family: "Newsreader", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-wrap: balance;
+    margin: 0 0 1rem;
+  }
+
+  .contact {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.6rem 1.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .contact h2 { margin: 0; }
+  .contact p { margin: 0; max-width: 36em; }
+
+  .button {
+    align-self: flex-start;
+    display: inline-block;
+    padding: 0.65rem 1.15rem;
+    border-radius: 10px;
+    background: var(--accent);
+    color: var(--bg);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .button:hover { background: var(--accent-strong); }
+
+  .muted { color: var(--text-secondary); font-size: 0.9rem; }
+
+  details {
+    border-top: 1px solid var(--rule);
+    padding: 1rem 0;
+  }
+
+  details:last-of-type { border-bottom: 1px solid var(--rule); }
+
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  summary::-webkit-details-marker { display: none; }
+
+  summary::after {
+    content: "+";
+    font-family: "IBM Plex Mono", monospace;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  details[open] summary::after { content: "–"; }
+
+  details p { margin: 0.7rem 0 0; color: var(--text-secondary); max-width: 38em; }
+
+  a { color: var(--accent-strong); }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+  .lang { font-family: "IBM Plex Mono", monospace; font-size: 0.78rem; letter-spacing: 0.08em; }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: 560px) {
+    .page { padding: 2.75rem 1rem 4rem; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <span class="mark">Calileo</span>
+    <h1>Help &amp; Support</h1>
+    <p class="lede">Calileo helps you count calories, track your weight and get stronger at the gym – with Apple Watch, a rest alarm and friends who cheer you on. No subscriptions, no in-app purchases, no tracking.</p>
+    <ul class="platforms">
+      <li>iPhone</li>
+      <li>Apple Watch</li>
+      <li>Widget</li>
+    </ul>
+  </header>
+
+  <section class="contact" aria-labelledby="contact">
+    <h2 id="contact">Question, bug or idea?</h2>
+    <p>Send us an email. It helps to include your iOS version, the Calileo version (Settings → About) and – if possible – a screenshot.</p>
+    <a class="button" href="mailto:support.calileo@calileo.ch?subject=Calileo%20Support">support.calileo@calileo.ch</a>
+    <p class="muted">We usually reply within two business days.</p>
+  </section>
+
+  <section aria-labelledby="faq">
+    <h2 id="faq">Frequently asked questions</h2>
+
+    <details>
+      <summary>Do I need an account?</summary>
+      <p>No. Calileo works without signing up. Your data stays on your device and – if iCloud is turned on – in your private iCloud, so your iPhone and Apple Watch stay in sync.</p>
+    </details>
+
+    <details>
+      <summary>How does Calileo import my weight from Apple Health?</summary>
+      <p>Allow Calileo to read “Weight” in the Health permissions. Entries from other apps or your smart scale then appear in Calileo automatically – even in the background.</p>
+    </details>
+
+    <details>
+      <summary>Why does the rest timer ring even in silent mode?</summary>
+      <p>The rest timer uses the iOS alarm feature (AlarmKit). For it to work, allow “Alarms” for Calileo the first time you start a timer. You can change this any time in the iOS Settings under Calileo.</p>
+    </details>
+
+    <details>
+      <summary>What do my friends see?</summary>
+      <p>Only what you share: weight history, goal, cut/bulk phases, training, achievements and streak. Meals, height and BMI stay private. A friend only sees your form photos and videos after you approve their request – and only once.</p>
+    </details>
+
+    <details>
+      <summary>How do I remove a friend or stop sharing?</summary>
+      <p>In the Friends tab, swipe a friend to the left and remove them. “Stop sharing” under “Your profile” in the Friends tab ends sharing completely – your shared data and form photos are then deleted.</p>
+    </details>
+
+    <details>
+      <summary>How do I block or report someone?</summary>
+      <p>In the Friends tab, swipe a friend, a cheer or a form photo request to the left – or tap “…” at the top right of a friend’s page. “Block” hides the person immediately, “Report” sends us a prefilled email. We review every report within 24 hours and remove content that isn’t allowed.</p>
+    </details>
+
+    <details>
+      <summary>How do I delete all my data?</summary>
+      <p>Delete the app from your iPhone and Apple Watch. To remove the iCloud copy, go to iOS Settings → your name → iCloud → Manage Storage → Calileo. Values written to Apple Health are managed directly in the Health app.</p>
+    </details>
+
+    <details>
+      <summary>Where does the product data come from when scanning?</summary>
+      <p>From the free database Open Food Facts (ODbL licence). If a product is missing or a value is wrong, you can add it yourself right in Calileo.</p>
+    </details>
+  </section>
+
+  <footer>
+    <span>© 2026 Calileo · Switzerland</span>
+    <span><a href="privacy.html">Privacy Policy</a> · <a class="lang" href="./" hreflang="de" lang="de">DEUTSCH</a></span>
+  </footer>
+
+</div>
+</body>
+</html>
