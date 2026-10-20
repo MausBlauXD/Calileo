@@ -368,7 +368,7 @@
     <h1>Privacy Policy</h1>
     <div class="doc-meta">
       <span>Last updated: <strong>October 20, 2026</strong></span>
-      <span>Version <strong>2.1.1</strong></span>
+      <span>Version <strong>2.4</strong></span>
       <span>Language: <strong>English</strong> · <a href="datenschutz.html" hreflang="de" lang="de">Deutsch</a></span>
     </div>
   </header>
@@ -428,11 +428,13 @@
       <tr><td>Water</td><td><span class="tag">write</span></td></tr>
       <tr><td>Body weight</td><td><span class="tag">write</span> <span class="tag read">read</span></td></tr>
       <tr><td>Body fat percentage, waist circumference</td><td><span class="tag read">read</span></td></tr>
-      <tr><td>Active energy</td><td><span class="tag read">read</span></td></tr>
-      <tr><td>Strength training workouts (iPhone or Apple Watch)</td><td><span class="tag">write</span></td></tr>
+      <tr><td>Active energy, steps</td><td><span class="tag read">read</span></td></tr>
+      <tr><td>Workouts (strength training and cardio, iPhone or Apple Watch)</td><td><span class="tag">write</span></td></tr>
+      <tr><td>Workouts from other apps (e.g. runs, rides) with distance, heart rate, steps and calories</td><td><span class="tag read">read</span></td></tr>
       <tr><td>Heart rate (during workouts)</td><td><span class="tag read">read</span></td></tr>
+      <tr><td>Cardio fitness (VO2 max), resting heart rate</td><td><span class="tag read">read</span></td></tr>
     </table>
-    <p>Weights you log in the Health app or another app (e.g. your smart scale) are imported by Calileo automatically — also in the background as soon as Health reports a new weight. You can turn this off under <code>Settings → Import weight from Health</code>. Body fat and waist circumference are only read to show them to you in the statistics.</p>
+    <p>Weights you log in the Health app or another app (e.g. your smart scale) are imported by Calileo automatically — also in the background as soon as Health reports a new weight. You can turn this off under <code>Settings → Import weight from Health</code>. Body fat and waist circumference are only read to show them to you in the statistics. Active energy and steps are read for the daily overview and for the calories burned and steps of your workouts. VO2 max and resting heart rate are only read on your device to calculate the cardio part of your fitness age; they are neither stored nor shared.</p>
     <p>This data never leaves your device or your private iCloud towards Calileo — unless you share it yourself via friend sharing (see below). You can review or revoke access at any time under <code>Settings → Health → Data Access &amp; Devices → Calileo</code>.</p>
 
     <h3>2.3 Camera (barcode scanner)</h3>
@@ -441,7 +443,10 @@
     <h3>2.4 Photo and label recognition</h3>
     <p>The features “recognise a meal from a photo” and “scan a nutrition label” use Apple’s on-device Foundation Models and Vision frameworks. The analysis runs entirely on your iPhone — photos are not sent to Calileo or any third party.</p>
 
-    <h3>2.5 Location</h3>
+    <h3>2.5 Fitness age and “Today’s tip”</h3>
+    <p>Calileo calculates your fitness age and the tips after training entirely on your device, from your sets, your weight, your goals, your sex and age and the Health data listed above. No data is transferred for this. Both are general estimates and suggestions, not a medical assessment.</p>
+
+    <h3>2.6 Location</h3>
     <p>Calileo does not collect location data.</p>
   </section>
 
@@ -449,7 +454,7 @@
     <span class="clause-number">03</span>
     <h2>Storage &amp; iCloud sync</h2>
     <p>The app stores your data locally (in an app group that also feeds the Home Screen widget with today’s numbers) and — if you are signed in to iCloud — syncs it automatically via <strong>CloudKit</strong> to your private iCloud database. Your phases (cut, bulk, etc.) are kept in your private iCloud key-value store so they carry over to a new device. This space belongs to your Apple Account; Calileo cannot see or access it.</p>
-    <p>Finished workouts from the Today tab (title, duration, average and maximum heart rate) are stored on your iPhone only.</p>
+    <p>Finished workouts from the Today tab (title, duration, average and maximum heart rate, calories burned) are stored on your iPhone only. Cardio sessions you log in Calileo, on your Apple Watch or on your Garmin watch (duration, distance, level, heart rate, calories burned, steps) are synced to your private iCloud like your other entries.</p>
   </section>
 
   <section class="clause" id="sharing">
@@ -460,11 +465,13 @@
       <li>your chosen display name,</li>
       <li>your weight history, goal weight and phases (cut, bulk, etc.),</li>
       <li>your training machines with folders and all logged sets (weight, reps, time),</li>
-      <li>your finished workouts from the Today tab with duration and average and maximum heart rate,</li>
+      <li>your finished workouts from the Today tab with duration, average and maximum heart rate and calories burned,</li>
+      <li>your cardio sessions (from Calileo and from the Health app) with duration, distance, heart rate, calories burned and steps,</li>
+      <li>the strength part of your fitness age with its history — not your actual age, and never the cardio part, VO2 max or resting heart rate,</li>
       <li>your achievements and your streak (how many days in a row you logged something),</li>
       <li>whether and when you posted form photos or a form video (not the content itself, see below).</li>
     </ul>
-    <p>This information is stored in Calileo’s public CloudKit database and can be seen by anyone who knows your code. Your height, your BMI and individual meals or calories are <strong>never</strong> included. You can stop sharing at any time under <code>Friends → Your profile → Stop sharing</code>; the shared data is then deleted.</p>
+    <p>This information is stored in Calileo’s public CloudKit database and can be seen by anyone who knows your code. Your height, your BMI and individual meals or calories eaten are <strong>never</strong> included. You can stop sharing at any time under <code>Friends → Your profile → Stop sharing</code>; the shared data is then deleted.</p>
     <p>If you cheer on a friend, your display name and the date are stored under their code in the same public database so they can see the cheer. Only cheers from the last two weeks are shown.</p>
   </section>
 
@@ -484,13 +491,13 @@
   <section class="clause" id="watch">
     <span class="clause-number">07</span>
     <h2>Apple Watch</h2>
-    <p>If an Apple Watch is paired, Calileo transfers training machines, folders, targets and completed sets directly between iPhone and Watch (WatchConnectivity). This transfer runs between your devices over your own Apple infrastructure, without touching a Calileo server. During a workout on the Watch, Calileo shows your heart rate and, with your permission, saves the workout to the Health app as a strength training workout.</p>
+    <p>If an Apple Watch is paired, Calileo transfers training machines, folders, targets and completed sets directly between iPhone and Watch (WatchConnectivity). This transfer runs between your devices over your own Apple infrastructure, without touching a Calileo server. During a workout on the Watch, Calileo shows your heart rate, the calories burned and, for cardio, your steps, and, with your permission, saves the workout to the Health app.</p>
   </section>
 
   <section class="clause" id="garmin">
     <span class="clause-number">08</span>
     <h2>Garmin watches</h2>
-    <p>If you connect a Garmin watch under <code>Settings → Garmin watch</code>, Calileo uses Garmin’s Connect IQ Mobile SDK to exchange data with the Calileo app on your watch over Bluetooth: your training machines (name, folder, target reps, last weight used), your rest times, a running rest and today’s workout are sent to the watch. Logged sets, cardio sessions (duration, distance, level, average heart rate) and changes to the rest or today’s workout come back and are stored like entries made in the app.</p>
+    <p>If you connect a Garmin watch under <code>Settings → Garmin watch</code>, Calileo uses Garmin’s Connect IQ Mobile SDK to exchange data with the Calileo app on your watch over Bluetooth: your training machines (name, folder, target reps, last weight used), your rest times, a running rest and today’s workout are sent to the watch. Logged sets, cardio sessions (duration, distance, level, average heart rate, calories burned, steps) and changes to the rest or today’s workout come back and are stored like entries made in the app.</p>
     <p>You choose the watch once in the Garmin Connect app, which passes the watch’s identifier and name to Calileo; they are stored only on your iPhone. The transfer runs directly between your iPhone and your watch, without a Calileo server; Calileo does not send any data to Garmin. The watch keeps a copy of your machines and any sets that haven’t reached your iPhone yet. The watch reads your heart rate only while the Calileo app is open on it; it is not saved as an activity in Garmin Connect.</p>
     <p>Bluetooth access is only requested when you connect a Garmin watch. You can disconnect the watch at any time under <code>Settings → Garmin watch</code> and remove the Calileo app from the watch via Garmin Connect. Garmin’s own processing (Garmin Connect app, Connect IQ Store) is governed by Garmin’s privacy policy.</p>
   </section>

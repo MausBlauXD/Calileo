@@ -368,7 +368,7 @@
     <h1>Datenschutzerklärung</h1>
     <div class="doc-meta">
       <span>Stand: <strong>20. Oktober 2026</strong></span>
-      <span>Version <strong>2.1.1</strong></span>
+      <span>Version <strong>2.4</strong></span>
       <span>Sprache: <strong>Deutsch</strong> · <a href="privacy.html" hreflang="en" lang="en">English</a></span>
     </div>
   </header>
@@ -428,11 +428,13 @@
       <tr><td>Wasser</td><td><span class="tag">schreibend</span></td></tr>
       <tr><td>Körpergewicht</td><td><span class="tag">schreibend</span> <span class="tag read">lesend</span></td></tr>
       <tr><td>Körperfettanteil, Taillenumfang</td><td><span class="tag read">lesend</span></td></tr>
-      <tr><td>Aktive Energie</td><td><span class="tag read">lesend</span></td></tr>
-      <tr><td>Krafttraining-Workouts (iPhone oder Apple Watch)</td><td><span class="tag">schreibend</span></td></tr>
+      <tr><td>Aktive Energie, Schritte</td><td><span class="tag read">lesend</span></td></tr>
+      <tr><td>Workouts (Krafttraining und Cardio, iPhone oder Apple Watch)</td><td><span class="tag">schreibend</span></td></tr>
+      <tr><td>Workouts anderer Apps (z. B. Läufe, Velotouren) mit Distanz, Puls, Schritten und Kalorien</td><td><span class="tag read">lesend</span></td></tr>
       <tr><td>Herzfrequenz (während des Trainings)</td><td><span class="tag read">lesend</span></td></tr>
+      <tr><td>Cardiofitness (VO2max), Ruhepuls</td><td><span class="tag read">lesend</span></td></tr>
     </table>
-    <p>Gewichte, die du in der Health-App oder einer anderen App (z. B. deiner Waage) einträgst, übernimmt Calileo automatisch — auch im Hintergrund, sobald Health ein neues Gewicht meldet. Diese Übernahme lässt sich unter <code>Einstellungen → Gewicht aus Health übernehmen</code> abschalten. Körperfett und Taillenumfang werden nur gelesen, um sie dir in der Statistik anzuzeigen.</p>
+    <p>Gewichte, die du in der Health-App oder einer anderen App (z. B. deiner Waage) einträgst, übernimmt Calileo automatisch — auch im Hintergrund, sobald Health ein neues Gewicht meldet. Diese Übernahme lässt sich unter <code>Einstellungen → Gewicht aus Health übernehmen</code> abschalten. Körperfett und Taillenumfang werden nur gelesen, um sie dir in der Statistik anzuzeigen. Aktive Energie und Schritte liest Calileo für die Tagesübersicht und für die verbrannten Kalorien und Schritte bei deinen Trainings. VO2max und Ruhepuls werden nur auf dem Gerät gelesen, um den Kardio-Teil deines Fitness-Alters zu berechnen; sie werden weder gespeichert noch geteilt.</p>
     <p>Diese Daten verlassen dein Gerät bzw. deine private iCloud nie in Richtung Calileo — ausser du teilst sie selbst über die Freund-Freigabe (siehe unten). Du kannst den Zugriff jederzeit unter <code>Einstellungen → Health → Datenzugriff &amp; Geräte → Calileo</code> einsehen oder widerrufen.</p>
 
     <h3>2.3 Kamera (Barcode-Scanner)</h3>
@@ -441,7 +443,10 @@
     <h3>2.4 Foto- und Etiketten-Erkennung</h3>
     <p>Die Funktionen „Gericht per Foto erkennen" und „Nährwert-Etikett scannen" nutzen Apples on-device Foundation-Models- und Vision-Framework. Die Analyse läuft vollständig lokal auf deinem iPhone — Fotos werden nicht an Calileo oder einen Drittanbieter gesendet.</p>
 
-    <h3>2.5 Standort</h3>
+    <h3>2.5 Fitness-Alter und „Tipp für heute“</h3>
+    <p>Das Fitness-Alter und die Tipps nach dem Training berechnet Calileo ausschliesslich auf deinem Gerät aus deinen Sätzen, deinem Gewicht, deinen Zielen, deinem Geschlecht und Alter sowie den oben genannten Health-Daten. Dabei werden keine Daten übertragen. Beides sind allgemeine Schätzungen und Hinweise, keine medizinische Beurteilung.</p>
+
+    <h3>2.6 Standort</h3>
     <p>Calileo erhebt keine Standortdaten.</p>
   </section>
 
@@ -449,7 +454,7 @@
     <span class="clause-number">03</span>
     <h2>Speicherung &amp; iCloud-Sync</h2>
     <p>Die App speichert deine Daten lokal (über eine App-Gruppe, die auch das Home-Bildschirm-Widget mit deinem heutigen Stand versorgt) und synchronisiert sie — sofern du bei iCloud angemeldet bist — automatisch über <strong>CloudKit</strong> in deine private iCloud-Datenbank. Deine Phasen (Cut, Bulk usw.) werden im privaten iCloud-Schlüsselwertspeicher abgelegt, damit sie auch auf einem neuen Gerät erhalten bleiben. Dieser Bereich gehört zu deiner Apple-ID; Calileo hat keinen Einblick oder Zugriff darauf.</p>
-    <p>Abgeschlossene Trainings aus dem Heute-Tab (Titel, Dauer, durchschnittlicher und maximaler Puls) werden nur lokal auf dem iPhone gespeichert.</p>
+    <p>Abgeschlossene Trainings aus dem Heute-Tab (Titel, Dauer, durchschnittlicher und maximaler Puls, verbrannte Kalorien) werden nur lokal auf dem iPhone gespeichert. Cardio-Einheiten, die du in Calileo, auf der Apple Watch oder der Garmin-Uhr erfasst (Dauer, Distanz, Stufe, Puls, verbrannte Kalorien, Schritte), werden wie deine übrigen Einträge in deiner privaten iCloud synchronisiert.</p>
   </section>
 
   <section class="clause" id="freigabe">
@@ -460,11 +465,13 @@
       <li>dein selbst gewählter Anzeigename,</li>
       <li>dein Gewichtsverlauf, dein Zielgewicht und deine Phasen (Cut, Bulk usw.),</li>
       <li>deine Trainingsgeräte mit Ordnern und alle eingetragenen Sätze (Gewicht, Wiederholungen, Zeitpunkt),</li>
-      <li>deine abgeschlossenen Trainings aus dem Heute-Tab mit Dauer sowie durchschnittlichem und maximalem Puls,</li>
+      <li>deine abgeschlossenen Trainings aus dem Heute-Tab mit Dauer, durchschnittlichem und maximalem Puls sowie verbrannten Kalorien,</li>
+      <li>deine Cardio-Einheiten (aus Calileo und aus der Health-App) mit Dauer, Distanz, Puls, verbrannten Kalorien und Schritten,</li>
+      <li>der Kraft-Teil deines Fitness-Alters samt Verlauf — nicht dein tatsächliches Alter und nie der Kardio-Teil, VO2max oder Ruhepuls,</li>
       <li>deine Erfolge und deine Serie (an wie vielen Tagen in Folge du etwas eingetragen hast),</li>
       <li>ob und wann du Form-Bilder oder ein Form-Video gepostet hast (nicht die Inhalte selbst, siehe unten).</li>
     </ul>
-    <p>Diese Angaben werden in der öffentlichen CloudKit-Datenbank von Calileo gespeichert und sind für alle sichtbar, die deinen Code kennen. Deine Grösse, dein BMI und einzelne Mahlzeiten oder Kalorien sind <strong>nie</strong> enthalten. Du kannst die Freigabe jederzeit über <code>Freunde → Dein Profil → Freigabe beenden</code> beenden; dabei werden die geteilten Daten gelöscht.</p>
+    <p>Diese Angaben werden in der öffentlichen CloudKit-Datenbank von Calileo gespeichert und sind für alle sichtbar, die deinen Code kennen. Deine Grösse, dein BMI und einzelne Mahlzeiten oder gegessene Kalorien sind <strong>nie</strong> enthalten. Du kannst die Freigabe jederzeit über <code>Freunde → Dein Profil → Freigabe beenden</code> beenden; dabei werden die geteilten Daten gelöscht.</p>
     <p>Feuerst du einen Freund an, wird dein Anzeigename mit Datum unter dessen Code in derselben öffentlichen Datenbank abgelegt, damit er die Anfeuerung sieht. Angezeigt werden nur Anfeuerungen der letzten zwei Wochen.</p>
   </section>
 
@@ -484,13 +491,13 @@
   <section class="clause" id="watch">
     <span class="clause-number">07</span>
     <h2>Apple Watch</h2>
-    <p>Ist eine Apple Watch gekoppelt, überträgt Calileo Trainingsgeräte, Ordner, Zielwerte und abgeschlossene Sätze direkt zwischen iPhone und Watch (WatchConnectivity). Diese Übertragung läuft geräteintern über deine eigene Apple-Infrastruktur, ohne einen Server von Calileo zu berühren. Während eines Trainings auf der Watch zeigt Calileo deinen Puls an und speichert das Training mit deiner Erlaubnis als Krafttraining-Workout in der Health-App.</p>
+    <p>Ist eine Apple Watch gekoppelt, überträgt Calileo Trainingsgeräte, Ordner, Zielwerte und abgeschlossene Sätze direkt zwischen iPhone und Watch (WatchConnectivity). Diese Übertragung läuft geräteintern über deine eigene Apple-Infrastruktur, ohne einen Server von Calileo zu berühren. Während eines Trainings auf der Watch zeigt Calileo deinen Puls, die verbrannten Kalorien und bei Cardio deine Schritte an und speichert das Training mit deiner Erlaubnis als Workout in der Health-App.</p>
   </section>
 
   <section class="clause" id="garmin">
     <span class="clause-number">08</span>
     <h2>Garmin-Uhren</h2>
-    <p>Verbindest du unter <code>Einstellungen → Garmin-Uhr</code> eine Garmin-Uhr, tauscht Calileo über das Connect IQ Mobile SDK von Garmin per Bluetooth Daten mit der Calileo-App auf deiner Uhr aus: Zur Uhr gehen deine Trainingsgeräte (Name, Ordner, Ziel-Wiederholungen, zuletzt verwendetes Gewicht), deine Pausenzeiten, eine laufende Pause und dein heutiges Training. Von der Uhr kommen gespeicherte Sätze, Cardio-Einheiten (Dauer, Distanz, Stufe, durchschnittlicher Puls) sowie Änderungen an Pause und heutigem Training zurück und werden wie Einträge in der App gespeichert.</p>
+    <p>Verbindest du unter <code>Einstellungen → Garmin-Uhr</code> eine Garmin-Uhr, tauscht Calileo über das Connect IQ Mobile SDK von Garmin per Bluetooth Daten mit der Calileo-App auf deiner Uhr aus: Zur Uhr gehen deine Trainingsgeräte (Name, Ordner, Ziel-Wiederholungen, zuletzt verwendetes Gewicht), deine Pausenzeiten, eine laufende Pause und dein heutiges Training. Von der Uhr kommen gespeicherte Sätze, Cardio-Einheiten (Dauer, Distanz, Stufe, durchschnittlicher Puls, verbrannte Kalorien, Schritte) sowie Änderungen an Pause und heutigem Training zurück und werden wie Einträge in der App gespeichert.</p>
     <p>Die Uhr wählst du einmalig in der Garmin-Connect-App aus; sie übergibt Calileo dabei die Kennung und den Namen der Uhr, die nur auf deinem iPhone gespeichert werden. Die Übertragung läuft direkt zwischen iPhone und Uhr, ohne einen Server von Calileo; Calileo sendet keine Daten an Garmin. Auf der Uhr liegt eine Kopie deiner Geräte sowie Sätze, die noch nicht beim iPhone angekommen sind. Den Puls liest die Uhr nur, solange die Calileo-App darauf geöffnet ist; er wird nicht als Aktivität in Garmin Connect gespeichert.</p>
     <p>Der Bluetooth-Zugriff wird erst angefragt, wenn du eine Garmin-Uhr verbindest. Du kannst die Uhr jederzeit unter <code>Einstellungen → Garmin-Uhr</code> trennen und die Calileo-App über Garmin Connect von der Uhr entfernen. Für die Verarbeitung durch Garmin selbst (Garmin-Connect-App, Connect IQ Store) gilt die Datenschutzerklärung von Garmin.</p>
   </section>
